@@ -1,0 +1,37 @@
+Range() = it generate sequence of number
+
+range(5) = range(stop) # yani wo automatically 0 - 5 in which 5 not included
+range(1,10) = range(Start,Stop)
+range(1,10,2) = range(Start,Stop,Step) 
+
+1 3 5 7 9 .....n terms
+n = int(input("Enter num = "))
+i = 1
+for _ in range (n):
+    print(i)
+    i+=2
+
+
+10 % number ko last digit ke liye
+n = n//10
+
+
+----------------------------------------  DATE = 23/09/26 (LIST) --------------------------------------------
+
+
+Array is a homogenious type of data ---> yani ek jesa data which use by list internally
+list not store actual data it store reference (Pointer) to object 
+
+id(x[0]) # ye id function address nikalne ke liye hota
+
+x = [] --->  import sys ---> sys.getsizeof(x) # find out kar sakte h var ne kitni memory use ki hota
+
+In python list is grownable in nature ---> apne aap bar sakti h according to data
+
+How python list internaly grow ?
+python list internally used a technique known as overallocation ...
+x =[10,20,30,40] ---> x.append(100)
+ab wo extra space bhi create kar rha h not for 100 but anee wali values ke liye
+
+
+
