@@ -4,8 +4,8 @@
 
 
 arr = [9, 4, -2, -1, 5, 0, -5, -3, 2]
-pos = []                       # non-negative numbers (order wahi)
-neg = []                       # negative numbers (order wahi)
+pos = []                       
+neg = []                      
 
 for x in arr:
     if x >= 0:
@@ -14,21 +14,19 @@ for x in arr:
         neg.append(x)
 
 result = []
-p = 0                          # pos list pe ungli
-q = 0                          # neg list pe ungli
-turn = 0                       # 0 = positive ki baari, 1 = negative ki baari
+p = 0                          
+q = 0                          
+turn = 0                       
 
-while p < len(pos) and q < len(neg):   # jab tak dono mein maal bacha ho
+while p < len(pos) and q < len(neg):   
     if turn == 0:
         result.append(pos[p])
         p += 1
-        turn = 1               # ab negative ki baari
+        turn = 1               
     else:
         result.append(neg[q])
         q += 1
-        turn = 0               # ab positive ki baari
-
-# jo list bachi usko seedha jod do
+        turn = 0               
 while p < len(pos):
     result.append(pos[p])
     p += 1
@@ -36,7 +34,7 @@ while q < len(neg):
     result.append(neg[q])
     q += 1
 
-print(result)                  # [9, -2, 4, -1, 5, -5, 0, -3, 2]
+print(result)                  
 
 
 

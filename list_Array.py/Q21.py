@@ -4,25 +4,19 @@
 
 arr = [1, 9, 3, 10, 4, 20, 2]
 n = len(arr)
-
-# pehle sort (exchange sort, tera purana code)
 for i in range(n - 1):
     for j in range(i + 1, n):
         if arr[j] < arr[i]:
             arr[i], arr[j] = arr[j], arr[i]
-# ab arr = [1, 2, 3, 4, 9, 10, 20]
-
-longest = 1                    # ab tak ki sabse lambi chain
-current = 1                    # abhi chal rahi chain
-
+longest = 1                    
+current = 1                   
 for i in range(1, n):
     if arr[i] == arr[i - 1] + 1:
-        current += 1           # ek zyada hai, chain badhi
+        current += 1           
     elif arr[i] != arr[i - 1]:
-        current = 1            # chain tooti, nayi shuru
-    # (agar barabar hai, yaani duplicate, to kuch nahi karna)
+        current = 1            
     if current > longest:
-        longest = current      # naya record
+        longest = current     
 
 print(longest)      
 

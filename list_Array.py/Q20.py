@@ -3,13 +3,13 @@
 
 
 arr = [6, -3, -10, 0, 2]
-best = arr[0]                  # ab tak ka sabse bada product
+best = arr[0]                
 
-for i in range(len(arr)):      # subarray kahan se shuru
-    product = 1                # guna ke liye 1 se shuru (0 se nahi, warna sab 0)
+for i in range(len(arr)):      
+    product = 1               
     for j in range(i, len(arr)):
-        product = product * arr[j]   # naya element guna karo
+        product = product * arr[j]  
         if product > best:
-            best = product     # naya record
+            best = product     
 
 print(best)    

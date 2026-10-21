@@ -2,17 +2,17 @@
 # Given an array of positive and negative numbers. Find if there is a subarray (of size at-least one) with 0 sum.
 
 arr = [4, 2, -3, 1, 6]
-found = False                  # abhi tak zero-sum subarray nahi mila
+found = False                  
 
-for i in range(len(arr)):      # subarray kahan se shuru
-    total = 0                  # naya start, sum 0 se
-    for j in range(i, len(arr)):   # kahan tak badhe
-        total += arr[j]        # naya element sum mein jodo
-        if total == 0:         # sum zero mil gaya
+for i in range(len(arr)):     
+    total = 0                 
+    for j in range(i, len(arr)):   
+        total += arr[j]        
+        if total == 0:         
             found = True
-            break              # inner loop band
+            break              
     if found:
-        break                  # bahar wala loop bhi band
+        break                 
 
 if found:
     print("Yes")
