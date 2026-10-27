@@ -3,7 +3,15 @@
 #     iterating over it.
 
 
+d ={"Mango":90,"Apple":60,"Berry":43,"Graphes":21}
 
+threshold = float(input("Enter a Threshold Limit = "))
+data = {}
+
+for key,value in d.items():
+    if value>=threshold:
+        data[key]=value
+print(data)
 
 
 

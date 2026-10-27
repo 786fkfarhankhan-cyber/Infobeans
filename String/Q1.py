@@ -7,8 +7,8 @@
 
 sr = input("Enter a String = ")
 
-rev = "" # ye ek empty str banai h taki bad me isse use kare
+rev = "" 
 for ch in sr:
-    rev = ch + rev
+    rev = ch+rev
 
 print(rev)
