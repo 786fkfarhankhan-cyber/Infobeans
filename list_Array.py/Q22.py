@@ -4,26 +4,26 @@
 arr = [8, 3, 1, 2]
 n = len(arr)
 
-# pehle original array ka sum nikalo (ye pehla record)
+
 best = 0
 for i in range(n):
     best += i * arr[i]
 
-# n baar rotate karo, har baar sum nikalo
+
 for r in range(n):
-    # ek step rotate (aakhri element ko aage laao)
+  
     item = arr[-1]
     for i in range(n - 1, 0, -1):
         arr[i] = arr[i - 1]
     arr[0] = item
 
-    # is rotation ka sum
+  
     total = 0
     for i in range(n):
         total += i * arr[i]
 
     if total > best:
-        best = total           # naya record
+        best = total           
 
 print(best)    
 

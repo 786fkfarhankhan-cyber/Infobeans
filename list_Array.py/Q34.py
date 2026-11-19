@@ -4,13 +4,13 @@
 
 arr = [7, 9, 2, 5, 6, 4, 1]
 target = 6
-found = False                         # abhi tak nahi mila
+found = False                         
 
-for i in range(len(arr)):             # i = index, 0 se aakhir tak
-    if arr[i] == target:              # is dibbe mein wahi number hai?
+for i in range(len(arr)):            
+    if arr[i] == target:              
         print(target, "found at index", i)
         found = True
-        break                         # mil gaya, ruk jao
+        break                       
 
-if found == False:                    # poora dekha, nahi mila
+if found == False:                  
     print(target, "not found")

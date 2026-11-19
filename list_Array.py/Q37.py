@@ -4,14 +4,14 @@
 
 nums = [5, 2, 4, 1]
 
-for i in range(1, len(nums)):       # i = agla patta (index 0 pehle se sorted maan lo)
-    key = nums[i]                   # patta haath mein uthaya
-    j = i - 1                       # sorted hisse ka aakhri index
+for i in range(1, len(nums)):       
+    key = nums[i]                   
+    j = i - 1                       
 
-    while j >= 0 and nums[j] > key: # peeche jaao jab tak bade patte mil rahe hain
-        nums[j + 1] = nums[j]       # bade patte ko ek jagah daayein khiskao
-        j -= 1                      # ek aur peeche dekho
+    while j >= 0 and nums[j] > key: 
+        nums[j + 1] = nums[j]       
+        j -= 1                      
 
-    nums[j + 1] = key               # khali jagah mein key rakh do
+    nums[j + 1] = key               
 
 print(nums)           

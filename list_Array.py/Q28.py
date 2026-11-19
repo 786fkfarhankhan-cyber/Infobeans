@@ -3,16 +3,16 @@
 
 
 P = [7, 9, 2, 5, 6, 4, 1]
-VAL = int(input("Enter VAL: "))   # jise dhundhna hai
+VAL = int(input("Enter VAL: "))   
 
-found = False                      # abhi tak nahi mila
+found = False                    
 
 for x in P:
-    if x == VAL:                   # match mila
+    if x == VAL:                 
         found = True
-        break                      # ab aage dekhne ka faayda nahi
+        break                      
 
-# loop khatam hone ke baad faisla
+
 if found == True:
     print("element found")
 else:

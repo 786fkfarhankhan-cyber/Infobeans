@@ -3,16 +3,16 @@
 
 arr = [4, 8, 9, 1, 8, 7, -100, 100, 2, 23]
 
-largest = arr[0]          # abhi tak ka sabse bada (pehla element maan liya)
-smallest = arr[0]         # abhi tak ka sabse chhota (wahi pehla element)
+largest = arr[0]          
+smallest = arr[0]        
 
 for x in arr:
-    if x > largest:       # ab tak ke bade se bhi bada mila
+    if x > largest:      
         largest = x
-    if x < smallest:      # ab tak ke chhote se bhi chhota mila
+    if x < smallest:      
         smallest = x
 
-print("Largest =", largest)      # 100
-print("Smallest =", smallest)    # -100
+print("Largest =", largest)      
+print("Smallest =", smallest)    
 
 

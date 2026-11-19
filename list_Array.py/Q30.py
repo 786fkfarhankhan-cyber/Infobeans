@@ -3,22 +3,22 @@
 
 
 
-A = [1, 4, 7, 10]           # ascending
-B = [9, 6, 3, 2]            # descending
+A = [1, 4, 7, 10]        
+B = [9, 6, 3, 2]            
 
-C = []                      # merged answer
-i = 0                       # A pe ungli, shuru se
-j = len(B) - 1              # B pe ungli, PEECHE se (kyunki B ulta hai)
+C = []                      
+i = 0                      
+j = len(B) - 1            
 
-while i < len(A) and j >= 0:      # jab tak dono mein kuch bacha ho
+while i < len(A) and j >= 0:      
     if A[i] <= B[j]:
-        C.append(A[i])      # A wala chhota hai, C mein daalo
-        i += 1              # A mein aage
+        C.append(A[i])     
+        i += 1              
     else:
-        C.append(B[j])      # B wala chhota hai, C mein daalo
-        j -= 1              # B mein peeche se aage (j ghatta hai)
+        C.append(B[j])     
+        j -= 1              
 
-# jo array bacha uska baki sab seedha jod do
+
 while i < len(A):
     C.append(A[i])
     i += 1
@@ -27,7 +27,7 @@ while j >= 0:
     C.append(B[j])
     j -= 1
 
-print(C)                    # [1, 2, 3, 4, 6, 7, 9, 10]
+print(C)                   
 
 
 

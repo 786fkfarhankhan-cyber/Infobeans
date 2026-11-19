@@ -4,9 +4,9 @@
 
 arr = [1, 2, 3, 4, 5]
 
-temp = arr[0]                  # pehle element ko bacha lo
-arr[0] = arr[-1]               # pehle ki jagah aakhri
-arr[-1] = temp                 # aakhri ki jagah bachaya hua pehla
+temp = arr[0]                  
+arr[0] = arr[-1]               
+arr[-1] = temp                 
 
 print(arr)    
 

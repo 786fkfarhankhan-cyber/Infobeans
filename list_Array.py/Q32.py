@@ -10,19 +10,19 @@
 A = [3, 2, 1, 7, 6, 3]
 B = [9, 3, 5, 6, 2, 8, 10]
 
-C = [0] * (len(A) + len(B))   # size M+N ka khali array (sab 0)
-front = 0                      # even yahan se bharenge, left se
-back = len(C) - 1              # odd yahan se bharenge, right se
+C = [0] * (len(A) + len(B))   
+front = 0                      
+back = len(C) - 1              
 
 for x in A:
-    if x % 2 == 0:             # even (2 se divide karne pe remainder 0)
+    if x % 2 == 0:            
         C[front] = x
-        front += 1             # front aage
-    else:                      # odd
+        front += 1            
+    else:                      
         C[back] = x
-        back -= 1              # back peeche
+        back -= 1             
 
-for x in B:                    # B ke saath bilkul wahi
+for x in B:                    
     if x % 2 == 0:
         C[front] = x
         front += 1
