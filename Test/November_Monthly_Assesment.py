@@ -111,29 +111,56 @@
 # 7. Calculate and display the average price of all products.
 # 8. Product must be unique on the basis of id
 
-# class Product : 
-#     def __init__(self,product_id , product_name,category,price):
-#         self.__product_id = product_id
-#         self.__product_name = product_name
-#         self.__category = category
-#         self.__price = price
-#     def find(self):
-#         if self.__price > 10000:
-            
-#             print(f"Product Name  = {self.__product_name}")
-#             print(f"Product Category = {self.__category}")
-#             print(f"Product Price = {self.__price}")
-#         else:
-#             pass
-#     def avg_price(self,avg):
-#         total = obj1.self.__price() + obj2.self.__price() + 
-    
-#     def product_details(self):
-#         print(f"Product Id = {self.__product_id} \nProduct Name = {self.__product_name} \nProduct Category = {self.__category} \nProduct Price = {self.__price}")   
 
-# l = []
-# obj1 = Product()
-# obj2 = Product()
-# obj3 = Product()
-# obj4 = Product()
-# obj5 = Product()
+class Product:
+    def _init_(self,iden,name,cate,price):
+        self.__product_id = iden
+        self.__product_name = name 
+        self.__category = cate
+        self.__price = price
+
+    def display_product(self):
+        print(f"Product ID:{self.__product_id}")
+        print(f"Product Name:{self.__product_name}")
+        print(f"Category:{self.__category}")
+        print(f"Price:{self.__price} (Indian Rupees)")
+        print("="*30)
+
+
+    def _hash_(self):
+        return hash(self.__product_id)
+
+    def _eq_(self, obj):
+        return self.__product_id == obj.iden
+
+    def _str_(self):
+        return f"Id: {self._product_id}\nName: {self.product_name}\nPrice: {self._price}"
+    
+    def get_price(self):
+        return self.__price
+
+
+
+class ProductManagement():
+    __product_collection = {}
+    def _init_(self, iden,name,cate,price):
+        if iden in ProductManagement.__product_collection:
+            print("="*30)
+            print(f"{iden} Id already Present")
+            print("="*30)
+            return 
+        ProductManagement.__product_collection[iden] = Product(iden, name, cate, price)
+
+
+obj1 = ProductManagement(101,"Acer","Electronics(Laptop)",70000)
+obj2 = ProductManagement(102,"Redmi","Electronics(Mobile Phone)", 15000)
+obj3 = ProductManagement(103,"RD NoteBook","Education(NoteBook)",50)
+obj4 = ProductManagement(104,"Pexpo","Water Bottel",150)
+obj5 = ProductManagement(105,"Alto 800","Vehical(4 wheeler)",500000)
+
+
+
+print("-"*10,"Product Management System","-"*10)
+obj1.display_product()
+
+print("*"*50)
